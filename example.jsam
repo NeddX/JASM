@@ -1,0 +1,10 @@
+int num : 10
+str string : "my string"
+
+if num == 10 {
+    println("yes")
+} else {
+    println("no")
+}
+
+println(string)

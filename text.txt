@@ -1,0 +1,246 @@
+[
+  {
+    "token_kind": "Identifier",
+    "text_span": {
+      "start": 0,
+      "end": 3,
+      "text": "num"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "Identifier",
+    "text_span": {
+      "start": 4,
+      "end": 5,
+      "text": "x"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "Colon",
+    "text_span": {
+      "start": 6,
+      "end": 7,
+      "text": ":"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "NumberLiteral",
+    "text_span": {
+      "start": 8,
+      "end": 10,
+      "text": "25"
+    },
+    "number": 25
+  },
+  {
+    "token_kind": "SemiColon",
+    "text_span": {
+      "start": 10,
+      "end": 11,
+      "text": ";"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "Identifier",
+    "text_span": {
+      "start": 12,
+      "end": 15,
+      "text": "str"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "Identifier",
+    "text_span": {
+      "start": 16,
+      "end": 17,
+      "text": "s"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "Colon",
+    "text_span": {
+      "start": 18,
+      "end": 19,
+      "text": ":"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "StringLiteral",
+    "text_span": {
+      "start": 20,
+      "end": 26,
+      "text": "\"aaaa\""
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "Identifier",
+    "text_span": {
+      "start": 28,
+      "end": 30,
+      "text": "if"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "Identifier",
+    "text_span": {
+      "start": 31,
+      "end": 32,
+      "text": "x"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "LeftAngleBracket",
+    "text_span": {
+      "start": 33,
+      "end": 34,
+      "text": "<"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "NumberLiteral",
+    "text_span": {
+      "start": 35,
+      "end": 36,
+      "text": "5"
+    },
+    "number": 5
+  },
+  {
+    "token_kind": "LeftBracket",
+    "text_span": {
+      "start": 37,
+      "end": 38,
+      "text": "{"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "Identifier",
+    "text_span": {
+      "start": 43,
+      "end": 44,
+      "text": "x"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "Equals",
+    "text_span": {
+      "start": 45,
+      "end": 46,
+      "text": "="
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "NumberLiteral",
+    "text_span": {
+      "start": 47,
+      "end": 48,
+      "text": "5"
+    },
+    "number": 5
+  },
+  {
+    "token_kind": "Plus",
+    "text_span": {
+      "start": 49,
+      "end": 50,
+      "text": "+"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "NumberLiteral",
+    "text_span": {
+      "start": 51,
+      "end": 52,
+      "text": "2"
+    },
+    "number": 2
+  },
+  {
+    "token_kind": "SemiColon",
+    "text_span": {
+      "start": 52,
+      "end": 53,
+      "text": ";"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "RightBracket",
+    "text_span": {
+      "start": 54,
+      "end": 55,
+      "text": "}"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "Identifier",
+    "text_span": {
+      "start": 57,
+      "end": 63,
+      "text": "prints"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "LeftBrace",
+    "text_span": {
+      "start": 63,
+      "end": 64,
+      "text": "("
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "Identifier",
+    "text_span": {
+      "start": 64,
+      "end": 65,
+      "text": "x"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "RightBrace",
+    "text_span": {
+      "start": 65,
+      "end": 66,
+      "text": ")"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "SemiColon",
+    "text_span": {
+      "start": 66,
+      "end": 67,
+      "text": ";"
+    },
+    "number": 0
+  },
+  {
+    "token_kind": "EOF",
+    "text_span": {
+      "start": 0,
+      "end": 0,
+      "text": ""
+    },
+    "number": 0
+  }
+]
+{}

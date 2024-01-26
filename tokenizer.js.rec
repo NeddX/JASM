@@ -1,0 +1,139 @@
+const TokenType = {
+    NUM : 'num',
+    STR : 'str',
+    IDENTIFIER : 'identifier',
+    COLON : ':',
+    OPEN_PAREN : '(',
+    CLOSE_PAREN : ')',
+    OPEN_BRACE : '{',
+    CLOSE_BRACE : '}',
+    IF : 'ete',
+    ELSE : 'urish',
+    GREATER_THAN : '>',
+    PRINT : 'printIt',
+    STRING_LITERAL : 'string_literal',
+    NUMBER_LITERAL : 'number_literal',
+};
+
+const keywords = {
+    num : TokenType.NUM,
+    str : TokenType.STR,
+    ete : TokenType.IF,
+    urish : TokenType.ELSE,
+    printIt : TokenType.PRINT,
+};
+
+const isAlpha = (char) => /[a-zA-Z_]/.test(char);
+const isAlphaNumeric = (char) => isAlpha(char) || /\d/.test(char);
+
+class Token
+{
+    constructor(type, value, line)
+    {
+        this.type = type;
+        this.value = value;
+        this.line = line;
+    }
+}
+
+function tokenize(code)
+{
+    const tokens = [];
+    let current = 0;
+    let line = 1;
+
+    while (current < code.length)
+    {
+        let char = code[current];
+
+        if (char === '\n')
+        {
+            line++;
+            current++;
+            continue;
+        }
+
+        if (/\s/.test(char))
+        {
+            current++;
+            continue;
+        }
+
+        if (isAlpha(char))
+        {
+            let identifier = '';
+
+            while (isAlphaNumeric(char))
+            {
+                identifier += char;
+                char = code[++current];
+            }
+
+            const keywordType = keywords[identifier];
+            const type = keywordType ? keywordType : TokenType.IDENTIFIER;
+
+            tokens.push(new Token(type, identifier, line));
+            continue;
+        }
+
+        if (/\d/.test(char))
+        {
+            let number = '';
+
+            while (/\d/.test(char))
+            {
+                number += char;
+                char = code[++current];
+            }
+
+            tokens.push(new Token(TokenType.NUMBER_LITERAL, parseInt(number), line));
+            continue;
+        }
+
+        switch (char)
+        {
+            case ':':
+            case '(':
+            case ')':
+            case '{':
+            case '}':
+            case '>':
+            case ',':
+            case ';': tokens.push(new Token(TokenType[char], char, line)); break;
+            case '"':
+                let stringLiteral = '';
+                char = code[++current];
+
+                while (char !== '"')
+                {
+                    stringLiteral += char;
+                    char = code[++current];
+                }
+
+                tokens.push(new Token(TokenType.STRING_LITERAL, stringLiteral, line));
+                current++; // Skip the closing double quote
+                break;
+            default: throw new Error(`Unexpected character at line ${line}: ${char}`);
+        }
+
+        current++;
+    }
+
+    return tokens;
+}
+
+// Example usage:
+const code = `
+let_num  x : 8;
+let_str : str "Yes";
+
+ete (x > 5) {
+    printIt("Greater than 5");
+    printIt(str);
+} urish {
+    printIt("Not greater than 5");
+}
+`;
+
+const tokens = tokenize(code);
+console.log(tokens);
